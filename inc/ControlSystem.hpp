@@ -7,6 +7,7 @@
 #include <eeros/control/Gain.hpp>
 #include <eeros/control/SignalChecker.hpp>
 #include <eeros/control/PeripheralInput.hpp>
+#include <eeros/control/PeripheralOutput.hpp>
 
 using namespace eeros::control;
 
@@ -18,6 +19,8 @@ public:
     // Define Blocks
     PeripheralInput<> q1;
     Gain<> g;
+    Constant<> motorVoltageSetpoint;
+    PeripheralOutput<> motor;
     SignalChecker<> signalChecker;
 
     TimeDomain timedomain;
