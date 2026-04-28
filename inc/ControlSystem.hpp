@@ -5,6 +5,8 @@
 #include <eeros/core/Executor.hpp>
 #include <eeros/control/Constant.hpp>
 #include <eeros/control/Gain.hpp>
+#include <eeros/control/SignalChecker.hpp>
+#include <eeros/control/PeripheralInput.hpp>
 
 using namespace eeros::control;
 
@@ -14,8 +16,9 @@ public:
     ControlSystem(double dt);
 
     // Define Blocks
-    Constant<> myConstant;
-    Gain<> myGain;
+    PeripheralInput<> q1;
+    Gain<> g;
+    SignalChecker<> signalChecker;
 
     TimeDomain timedomain;
 };
