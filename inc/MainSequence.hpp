@@ -26,6 +26,7 @@ public:
 
     int action()
     {
+        cs.fwKinOdom.enable();
         while (eeros::sequencer::Sequencer::running)
         {
             sleep(1.0);
