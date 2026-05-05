@@ -156,6 +156,6 @@ MyRobotSafetyProperties::MyRobotSafetyProperties(ControlSystem &cs, double dt)
 
     // Define exit function
     exitFunction = ([&](SafetyContext *privateContext) {
-        privateContext->triggerEvent(doSystemOff);
+        privateContext->triggerEvent(abort);
     });
 }
